@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: inventoryMgtSystem
+  config:
+    import: optional:configserver:http://localhost:8888
+
+
+#secretJwtString=5TmAJV6VjPQvYD0yEAVyxEW0KVXYUsnb

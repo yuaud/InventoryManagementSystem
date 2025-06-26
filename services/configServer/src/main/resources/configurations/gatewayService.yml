@@ -1,0 +1,50 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: inventoryMgtSystem-users
+          uri: lb:http://inventoryMgtSystem
+          predicates:
+            - Path=/api/users/**
+        - id: inventoryMgtSystem-auth
+          uri: lb:http://inventoryMgtSystem
+          predicates:
+            - Path=/api/auth/**
+        - id: productService
+          uri: lb:http://productService
+          predicates:
+            - Path=/api/products/**
+        - id: categoryService
+          uri: lb:http://categoryService
+          predicates:
+            - Path=/api/categories/**
+        - id: supplierService
+          uri: lb:http://supplierService
+          predicates:
+            - Path=/api/suppliers/**
+        - id: transactionService
+          uri: lb:http://transactionService
+          predicates:
+            - Path=/api/transactions/**
+        - id: transactionService-gemini-ai
+          uri: lb:http://transactionService
+          predicates:
+            - Path=/api/gemini/**
+
+
+server:
+  port: 8222

@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3308/users
+    username: yusuf
+    password: yusuf
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 2GB
+
+server:
+  port: 5070
+
+
+
+geminiApiUrl: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
+geminiApiKey: AIzaSyBosiSY89ta3atO6jPOISd8OIO2TnbsWf8
+secretJwtString: 5TmAJV6VjPQvYD0yEAVyxEW0KVXYUsnb

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: categoryService
+  config:
+    import: optional:configserver:http://localhost:8888
