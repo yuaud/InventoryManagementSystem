@@ -21,5 +21,5 @@ server:
 
 
 geminiApiUrl: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
-geminiApiKey: AIzaSyBosiSY89ta3atO6jPOISd8OIO2TnbsWf8
-secretJwtString: 5TmAJV6VjPQvYD0yEAVyxEW0KVXYUsnb
+geminiApiKey: 
+secretJwtString: 
